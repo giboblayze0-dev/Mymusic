@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>HTML</title>
+  
+  <!-- HTML -->
+  
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<input type="text" id="search" placeholder="Search songs...">
+
+<div id="results"></div>
+
+<body>
+  <nav>
+  <ul id="musicList">
+    <li><a href="index.html">HOME</a></li><br>
+    <li><a href="new music.html">NEW MUSIC</a></li><br>
+    <li><a href="trending music.html">TRENDING MUSIC</a></li><br>
+    <li><a href="new videos.html">NEW VIDEOS</a> </li><br>
+    <li><a href="trending videos.html">TRENDING VIDEOS</a></li>
+  </ul>
+  </nav>
+ <div>
+   <h3>NEW MUSIC</h3>
+   <br>
+   <h2>Gibo Blayze YANKHA PHONE.mp3</h2>
+   <div class="music-player">
+   <img src="/termux.jpg" height="200px" wedth="200px">
+   <audio controls>
+     <source src="/Gibo-Blayze-Yankha-PhoneProd.Tingset.mp3" type="audio/mpeg">
+     <source src="/Gibo-Blayze-Yankha-PhoneProd.Tingset.ogg" type="audio/ogg">
+   </audio>
+   <a href="/Gibo-Blayze-Yankha-PhoneProd.Tingset.mp3"download="audio//Gibo-Blayze-Yankha-PhoneProd.Tingset.mp3">download /Gibo-Blayze-Yankha-PhoneProd.Tingset.mp3</a>
+   </div>
+   <br><br><br>
+   <h2>Gibo Blayze ndatapo ine.mp3</h2>
+   <div class="music-player">
+   <img src="/termux.jpg" height="200px" wedth="200px">
+   <audio controls>
+     <source src="/Gibo-Blayze-Ndatopa-IneProd.Tingset.mp3" type="audio/mpeg">
+     <source src="/Gibo-Blayze-Ndatopa-IneProd.Tingset.ogg" type="audio/ogg">
+     
+   </audio>
+   
+   
+   <a href="/Gibo-Blayze-Ndatopa-IneProd.Tingset.mp3" download="audio//Gibo-Blayze-Ndatopa-IneProd.Tingset.mp3"
+   >download/Gibo-Blayze-Ndatopa-IneProd.Tingset.mp3</a>
+   </div>
+ 
+<div>
+<h3>TRENDING MUSIC</h3>
+</div>
+<h2>Gibo Blayze why me.mp3</h2>
+<div class="music-player">
+<img src="/termux.jpg" height="200px" wedth="200px">
+<audio controls>
+  <source src="/Gibo-Blayze-Why-MeProd.Tingset.mp3" type="audio/mpeg">
+  <source src="/Gibo-Blayze-Why-MeProd.Tingset.ogg" type="audio/ogg">
+</audio>
+
+<a href="/Gibo-Blayze-Why-MeProd.Tingset.mp3" download="/Gibo-Blayze-Why-MeProd.Tingset.mp3">download/Gibo-Blayze-Why-MeProd.Tingset.mp3</a>
+</div>
+
+<br><br><br>
+<h2>Gibo Blayze yankha phone.mp3</h2>
+<div class="music-player">
+<img src="/termux.jpg" height="200px" wedth="200px">
+<audio controls>
+  <source src="/Gibo-Blayze-Yankha-PhoneProd.Tingset.mp3" type="audio/mpeg">
+  <source src="/Gibo-Blayze-Yankha-PhoneProd.Tingset.ogg" type="audio/ogg">
+  
+</audio>
+
+
+<a href="/Gibo-Blayze-Yankha-PhoneProd.Tingset.mp3" download="audio/Gibo-Blayze-Yankha-PhoneProd.Tingset.mp3">/Gibo-Blayze-Yankha-PhoneProd.Tingset.mp3</a>
+ </div>
+ <div>
+   <br><br>
+   <div>
+    <button id="btn" onclick="showmore()">showmore</button>
+    </div>
+    <br><br><br><br>
+  <h3>NEW VIDEOS </h3>
+  </div>
+  <videos controls>
+    
+  </videos>
+  <br><br><br>
+  <video height="300px" wedth="300px" controls>
+   <source src="/best clip.mp4" type="video/mp4">
+  </video>
+  <br><br><br>
+  <video height="300px" wedth="300px" controls>
+    <source src="/best clip.mp4" type="video/mp4">
+  </video>
+
+  <div>
+    <br><br><br>
+    <h3>TRENDING VIDEOS </h3>
+    <br><br><br>
+    <video height="300px" wedth="300px" controls>
+      <source src="/best clip.mp4" type="video/mp4">
+    </video>
+    <br><br><br>
+
+    <video height="300px" wedth="300px" controls>
+      <source src= "/best clip.mp4" type="video/mp4">
+    </video>
+   
+    <br><br><br>
+    <button id="btn" onclick="showMore()">Show More</button>
+    
+  </div>
+  <!-- Project -->
+  <script>
+const songs = [
+{
+title: "/Gibo-Blayze-Yankha-PhoneProd.Tingset.mp3",
+artist: "/Gibo-Blayze-Ndatopa-IneProd.Tingset.mp3",
+link: "/best clip.mp4"
+},
+{
+title: "/Gibo-Blayze-Yankha-PhoneProd.Tingset.mp3",
+artist: "/Gibo-Blayze-Yankha-PhoneProd.Tingset.mp3",
+link: "/Gibo-Blayze-Ndatopa-IneProd.Tingset.mp3"
+},
+{
+title: "/Gibo-Blayze-Why-MeProd.Tingset.mp3",
+artist: "/Gibo-Blayze-Why-MeProd.Tingset.mp3",
+link: "/Gibo-Blayze-Ndatopa-IneProd.Tingset.mp3"
+}
+];
+</script>
+<script>
+const search = document.getElementById("search");
+const results = document.getElementById("results");
+
+search.addEventListener("keyup", function(){
+
+let keyword = search.value.toLowerCase();
+results.innerHTML = "";
+
+songs.filter(song =>
+song.title.toLowerCase().includes(keyword)
+).forEach(song => {
+
+results.innerHTML += `
+<div>
+<h3>${song.title}</h3>
+<audio controls src="${song.link}"></audio>
+</div>
+`;
+
+});
+
+});
+</script>
+  <script src="main.js"><script>
+</script>
+<p>contact us on 0983593493 call and Whatsapp <br>
+we want to help upcoming artist to reach more audience </p>
+<h2>copyright 2026</h2>
+<h3>developer Gibo Blayze </h3>
+<h2><a href="index.html">backtop</a></h2>
+
+
+</body>
+</html>

@@ -33,173 +33,101 @@
   </ul>
   </nav>
  <div>
-   <h3>NEW MUSIC</h3>
-   <br>
-   <div class="song">
-   <h2>Gibo-Blayze-Yankha-Phone</h2>
    
-   <img src="termux.jpg" height="200" width="200">
-     
-   <audio controls>
-     <source src="Mymusic/Gibo-Blayze-Yankha-PhoneProd.Tingset.mp3" type="audio/mpeg">
-     
-   </audio>
-   <a href="Mymusic/Gibo-Blayze-Yankha-PhoneProd.Tingset.mp3"download>Download</a>
-   </div>
-   <br><br><br>
-   <div class="song">
-   <h2>Gibo-Blayze-ndatapo-Ine</h2>
-   
-   <img src="termux.jpg" height="200" width="200">
-   <audio controls>
-     <source src="Mymusic/Gibo-Blayze-Ndatopa-IneProd.Tingset.mp3" type="audio/mpeg">
-     
-     
-   </audio>
-   
-   
-   <a href="Mymusic/Gibo-Blayze-Ndatopa-IneProd.Tingset.mp3" download>Download</a>
-   </div>
- 
-<div>
-<h3>TRENDING MUSIC</h3>
-</div>
-   <div class="song">
-<h2>Gibo-Blayze-why-me</h2>
-   
-<img src="termux.jpg" height="200" width="200">
-<audio controls>
-  <source src="Mymusic/Gibo-Blayze-Why-MeProd.Tingset.mp3" type="audio/mpeg">
-  
-</audio>
+<body>
 
-<a href="Mymusic/Gibo-Blayze-Why-MeProd.Tingset.mp3" download>Download</a>
-</div>
+<h2>🎵 Upload Song Admin Panel</h2>
 
-<br><br><br>
-   <div class="song">
-<h2>Gibo-Blayze-Yankha-Phone</h2>
+<input type="text" id="title" placeholder="Song Title">
+<input type="text" id="artist" placeholder="Artist Name">
+<select id="type">
+  <option value="new">New</option>
+  <option value="trending">Trending</option>
+  <option value="albums">Albums</option>
+</select>
 
-<img src="termux.jpg" height="200" width="200">
-     
-<audio controls>
-  <source src="Mymusic/Gibo-Blayze-Yankha-PhoneProd.Tingset.mp3" type="audio/mpeg">
-  
-  
-</audio>
+<input type="file" id="image">
+<input type="file" id="audio">
 
+<button onclick="uploadSong()">Upload Song</button>
 
-<a href="Mymusic/Gibo-Blayze-Yankha-PhoneProd.Tingset.mp3" download>Download</a>
- </div>
- <div>
-   <br><br>
-   <div>
-    <button id="btn" onclick="showmore()">showmore</button>
-    </div>
-    <br><br><br><br>
-  <h3>NEW VIDEOS </h3>
-  </div>
-  <videos controls>
-    
-  </videos>
-  <br><br><br>
-   <div class="song">
-     <h3>bestclip</h3>
-  <video height="300" width="300" controls>
-   <source src="bestclip.mp4" type="video/mp4">
-  </video>
-  <br><br><br>
-  <video height="300" width="300" controls>
-    <source src="video/bestclip.mp4" type="video/mp4">
-  </video>
+<p id="status"></p>
 
-  <div>
-    <br><br><br>
-    <h3>TRENDING VIDEOS </h3>
-    <br><br><br>
-    <video height="300px" wedth="300" controls>
-      <source src="video/bestclip.mp4" type="video/mp4">
-    </video>
-    <br><br><br>
+<script type="module">
+import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm";
 
-    <video height="300px" width="300" controls>
-      <source src= "video/bestclip.mp4" type="video/mp4">
-    </video>
-   
-    <br><br><br>
-    <button id="btn" onclick="showMore()">Show More</button>
-    
-  </div>
-  <!-- Project -->
+const supabase = createClient(
+  "YOUR_SUPABASE_URL",
+  "YOUR_SUPABASE_ANON_KEY"
+);
+
+// UPLOAD FUNCTION
+window.uploadSong = async function () {
+
+  const title = document.getElementById("title").value;
+  const artist = document.getElementById("artist").value;
+  const type = document.getElementById("type").value;
+
+  const imageFile = document.getElementById("image").files[0];
+  const audioFile = document.getElementById("audio").files[0];
+
+  document.getElementById("status").innerText = "Uploading...";
+
+  // 1. Upload image
+  const imageName = Date.now() + "-" + imageFile.name;
+
+  let { data: imgData, error: imgError } = await supabase
+    .storage
+    .from("images")
+    .upload(imageName, imageFile);
+
+  const imageUrl = supabase.storage
+    .from("images")
+    .getPublicUrl(imageName).data.publicUrl;
+
+  // 2. Upload audio
+  const audioName = Date.now() + "-" + audioFile.name;
+
+  let { data: audioData, error: audioError } = await supabase
+    .storage
+    .from("music-files")
+    .upload(audioName, audioFile);
+
+  const audioUrl = supabase.storage
+    .from("music-files")
+    .getPublicUrl(audioName).data.publicUrl;
+
+  // 3. Save to database
+  const { data, error } = await supabase
+    .from("songs")
+    .insert([
+      {
+        title,
+        artist,
+        type,
+        image_url: imageUrl,
+        audio_url: audioUrl
+      }
+    ]);
+
+  if (error) {
+    document.getElementById("status").innerText = "❌ Error uploading";
+    console.log(error);
+  } else {
+    document.getElementById("status").innerText = "✅ Upload successful!";
+  }
+};
+
+</script>
+
+</body>
+   </html>
 
 <p>contact us on 0983593493 call and Whatsapp <br>
 we want to help upcoming artist to reach more audience </p>
 <h2>copyright 2026</h2>
 <h3>developer Gibo Blayze </h3>
 <h2><a href="index.html">backtop</a></h2>
-<script>
-const songs = [
-
-{
-title: "Yankha-Phone",
-artist: "Gibo-Blayze",
-image: "termux.jpg",
-audio: "Gibo-Blayze-Yankha-PhoneProd-Tingset.mp3"
-},
-
-{
-title: "Ndatopa-Ine",
-artist: "Gibo-Blayze",
-image: "termux.jpg",
-audio: "Gibo-Blayze-Ndatopa-IneProd.Tingset.mp3"
-},
-
-{
-title: "Why-Me",
-artist: "Gibo-Blayze",
-image: "termux.jpg",
-audio: "Gibo-Blayze-Why-MeProd.Tingset.mp3"
-}
-
-];
-
-
-function searchSongs(){
-
-let input = document.getElementById("search").value.toLowerCase();
-let results = document.getElementById("results");
-
-results.innerHTML="";
-
-songs.forEach(song=>{
-
-if(song.title.toLowerCase().includes(input) || song.artist.toLowerCase().includes(input)){
-
-results.innerHTML += `
-
-<div class="song">
-
-<img src="${song.image}" width="120">
-
-<h3>${song.title}</h3>
-
-<p>${song.artist}</p>
-
-<audio controls src="${song.audio}"></audio>
-
-<br>
-
-<a href="${song.audio}" download>Download</a>
-
-</div>
-
-`;
-
-}
-
-});
-
-}
-   </script>     
+    
 </body>
 </html>

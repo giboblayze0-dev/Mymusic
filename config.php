@@ -1,8 +1,8 @@
 <?php
-$host = "localhost";
-$user = "root";        // your DB username
-$pass = "gift1999";            // your DB password
-$db   = "BlayzVibe.great-site.net";      // your database name
+$host = "sql123.epizy.com";
+$user = "epiz_12345678";
+$pass = "yourStrongPassword";
+$db   = "epiz_12345678_xmusic";
 
 $conn = new mysqli($host, $user, $pass, $db);
 

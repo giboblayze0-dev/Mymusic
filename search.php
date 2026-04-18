@@ -1,13 +1,3 @@
-<?php
-$conn = new mysqli("localhost", "DB_USER", "DB_PASS", "DB_NAME");
-
-if ($conn->connect_error) {
-    die("DB Error: " . $conn->connect_error);
-}
-?>
-
-
-
 <?php include 'config.php'; ?>
 
 <form method="GET">

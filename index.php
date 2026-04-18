@@ -100,6 +100,6 @@ while($row = $q->fetch_assoc()) {
 ?>
 <button onclick="loadMore('news')">Load More</button>
 </div>
-
+<footer>we help upcoming artists to next level<br><h3>contact us</h3><p>Email: giboblayze0@gmail.com<br>#098359349 for call and WhatsApp</p></footer>
 </body>
 </html>

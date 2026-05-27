@@ -1,27 +1,28 @@
 [
   {
-    "title":"",
-    "artist""",
+    "title":"Ulendo",
+    "artist":"Jaycole ft Emoh_P_WyDadah",
     "section":"albums",
-    "slug":"",
-    "image":"",
+    "slug":"Ulendo",
+    "image":"https://res.cloudinary.com/dvvjrd7ax/image/upload/1000022933_saojtr.jpg",
     "audio":"https://res.cloudinary.com/dvvjrd7ax/video/upload/v1779901719/Jaycole_Emoh-P_WyDadah_Mikulu_Music_Ulendo__20_years_EP___1_comsup.mp3",
     "download":"https://res.cloudinary.com/dvvjrd7ax/video/upload/v1779901719/Jaycole_Emoh-P_WyDadah_Mikulu_Music_Ulendo__20_years_EP___1_comsup.mp3"
   },
   {
-    "title":"",
-    "artist":"",
-    "section":"",
-    "slug":"",
-    "image":"",
+    "title":"Udanena",
+    "artist":"Jaycole ft Emoh_P",
+    "section":"albums",
+    "slug":"Udanena",
+    "image":"https://res.cloudinary.com/dvvjrd7ax/image/upload/1000022933_saojtr.jpg",
     "audio":"https://res.cloudinary.com/dvvjrd7ax/video/upload/Jaycole_Emoh_P_Mikulu_Music_Ukadanena__20_years_EP_xksuxn.mp3",
     "download":"https://res.cloudinary.com/dvvjrd7ax/video/upload/Jaycole_Emoh_P_Mikulu_Music_Ukadanena__20_years_EP_xksuxn.mp3"
   },
   {
-    "title":"",
-    "artist":"",
-    "section":"",
-    "slug":"",
+    "title":"Pano",
+    "artist":"Jaycole ft Emoh_P",
+    "section":"albums",
+    "slug":"Pano",
+    "image":"https://res.cloudinary.com/dvvjrd7ax/image/upload/1000022933_saojtr.jpg",
     "audio ":"https://res.cloudinary.com/dvvjrd7ax/video/upload/Jaycole_Emoh-P_Mikulu_Music_PANO_20_years_EP_u3rytb.mp3",
     "download":"https://res.cloudinary.com/dvvjrd7ax/video/upload/Jaycole_Emoh-P_Mikulu_Music_PANO_20_years_EP_u3rytb.mp3"
   },
@@ -40,6 +41,7 @@
     "artist":"Jaycole ft Emoh_p",
     "section":"albums",
     "slug":"Mdalitso",
+    "image":"https://res.cloudinary.com/dvvjrd7ax/image/upload/1000022933_saojtr.jpg",
     "audio":"https://res.cloudinary.com/dvvjrd7ax/video/upload/v1779901756/Jaycole_Emoh-P_Mikulu_Music_Mdalitso__20_years_EP_joy6fi.mp3",
     "download":"https://res.cloudinary.com/dvvjrd7ax/video/upload/v1779901756/Jaycole_Emoh-P_Mikulu_Music_Mdalitso__20_years_EP_joy6fi.mp3"
   },

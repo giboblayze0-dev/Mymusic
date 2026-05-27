@@ -1,4 +1,7 @@
-
+body {
+  background-color: black;
+  color: white; /* makes text visible */
+}
 
 p {
   text-align: center;

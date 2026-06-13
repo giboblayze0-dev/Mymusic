@@ -1,3 +1,27 @@
+.song-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.song-card {
+    text-align: center;
+    background: #111;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.song-card img {
+    width: 100%;
+    max-width: 150px;
+    border-radius: 10px;
+}
+
+.song-card audio {
+    width: 100%;
+    max-width: 300px;
+}
+
 body {
   background-color: #121212;
   color: white;

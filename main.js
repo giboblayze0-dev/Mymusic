@@ -1,3 +1,30 @@
+async function searchSongs() {
+  const query = document.getElementById("searchInput").value;
+  const loading = document.getElementById("loading");
+  const results = document.getElementById("results");
+
+  // Show loading
+  loading.style.display = "block";
+  results.innerHTML = "";
+
+  try {
+    // simulate API request (replace with your real API)
+    const response = await fetch(`/api/songs?search=${query}`);
+    const data = await response.json();
+
+    // Display results
+    results.innerHTML = data.map(song => `
+      <p>${song.title} - ${song.artist}</p>
+    `).join("");
+
+  } catch (error) {
+    results.innerHTML = "Error loading songs.";
+  }
+
+  // Hide loading
+  loading.style.display = "none";
+}
+
 let allSongs = [];
 
 const state = {

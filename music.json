@@ -1,12 +1,4 @@
 [
-   {
-  "id": 1,
-  "title": "One Love",
-  "artist": "Bob Marley",
-  "image": "images/onelove.jpg",
-  "section": "latest",
-  "link": "songs/one-love.html"
-   },
    
    {
     "id":"6",

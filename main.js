@@ -92,15 +92,15 @@ function renderSection(section) {
     return;
   }
 
-  const visible = songs.slice(0, state[section] * songsPerPage);
+  const page = state[section] || 1;
+const visible = songs.slice(0, page * songsPerPage);
 
 container.innerHTML = "";
 
 visible.forEach(song => {
   container.innerHTML += `
     <div class="song-card">
-
-      <a href="${song.page}" class="song-link">
+      <a href="${song.page}">
         <img src="${song.image}" alt="${song.title}">
         <h3>${song.title}</h3>
         <p>${song.artist}</p>
@@ -111,7 +111,6 @@ visible.forEach(song => {
       </audio>
 
       <a href="${song.download}" download>⬇ Download</a>
-
     </div>
   `;
 });

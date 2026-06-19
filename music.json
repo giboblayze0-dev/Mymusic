@@ -1,13 +1,20 @@
 [
    {
+  "id": 1,
+  "title": "One Love",
+  "artist": "Bob Marley",
+  "image": "images/onelove.jpg",
+  "section": "latest",
+  "link": "songs/one-love.html"
+   },
+   
+   {
     "id":"6",
     "title":"Limbika",
     "artist":"Mlee",
     "section":"new",
-    "slug":"Limbika",
     "image":"https://res.cloudinary.com/dvvjrd7ax/image/upload/v1778436711/file_000000004dc471fbaf6fd0abf23158d6_nmdeeb.png",
-    "audio":"https://res.cloudinary.com/dvvjrd7ax/video/upload/v1781888418/M_LEE_-_LIMBIKA___TING_KUNYIMBO_mlbly8.mp3",
-    "download":"https://res.cloudinary.com/dvvjrd7ax/video/upload/fl_attachment/v1781888418/M_LEE_-_LIMBIKA___TING_KUNYIMBO_mlbly8.mp3"
+    "link":"music,/"
   },
    
   {

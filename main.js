@@ -92,28 +92,27 @@ function renderSection(section) {
     return;
   }
 
-  const page = state[section] || 1;
-const visible = songs.slice(0, page * songsPerPage);
+  const visible = songs.slice(0, state[section] * songsPerPage);
 
 container.innerHTML = "";
 
 visible.forEach(song => {
-  container.innerHTML += `
-    <div class="song-card">
-      <a href="${song.page}">
-        <img src="${song.image}" alt="${song.title}">
-        <h3>${song.title}</h3>
-        <p>${song.artist}</p>
-      </a>
+container.innerHTML += `
+<div class="song-card">
+<img src="${song.image}" alt="${song.title}">
+<h3>${song.title}</h3>
+<p>${song.artist}</p>
 
-      <audio controls>
-        <source src="${song.audio}" type="audio/mpeg">
-      </audio>
+<audio controls>  
+      <source src="${song.audio}" type="audio/mpeg">  
+    </audio>  
 
-      <a href="${song.download}" download>⬇ Download</a>
-    </div>
-  `;
+    <a href="${song.download}" download>⬇ Download</a>  
+  </div>  
+`;
+
 });
+} 
 
 // LOAD MORE BUTTONS
 document.querySelectorAll(".loadmore").forEach(btn => {

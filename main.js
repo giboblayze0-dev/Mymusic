@@ -1,3 +1,18 @@
+const searchBox = document.getElementById("searchBox");
+
+searchBox.addEventListener("keyup", function () {
+    const filter = this.value.toLowerCase();
+    const links = document.querySelectorAll("#songs a");
+
+    links.forEach(link => {
+        if (link.textContent.toLowerCase().includes(filter)) {
+            link.style.display = "";
+        } else {
+            link.style.display = "none";
+        }
+    });
+});
+
 async function searchSongs() {
   const query = document.getElementById("searchInput").value;
   const loading = document.getElementById("loading");
